@@ -66,7 +66,7 @@ public class EmployeeController {
 		return new ResponseEntity<String>(empJson, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value = "/update", method = RequestMethod.POST, produces="application/json")
+	@RequestMapping(value = "/update", method = RequestMethod.PUT, produces="application/json")
 	public ResponseEntity<String> updateEmployee(@RequestParam("id") String id,
 			@RequestParam("name") String name,
 			@RequestParam("department") String department,
@@ -87,7 +87,7 @@ public class EmployeeController {
 		return new ResponseEntity<String>(response.toString(), HttpStatus.OK);
 	}	
 	
-	@RequestMapping(value = "/delete", method = RequestMethod.POST, produces="application/json")
+	@RequestMapping(value = "/delete", method = RequestMethod.DELETE, produces="application/json")
 	public ResponseEntity<String> delete(@RequestParam("id") String id) {
 		JSONObject response = new JSONObject();
 		try {
