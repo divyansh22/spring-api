@@ -23,7 +23,7 @@ import com.google.gson.Gson;
 import com.wynk.models.EmployeeBean;
 import com.wynk.services.EmployeeServices;
 
-@Controller
+@RestController
 public class EmployeeController {
 	
 	@Autowired
