@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-import com.google.gson.Gson;
 import com.wynk.models.EmployeeBean;
 import com.wynk.services.EmployeeServices;
 
@@ -28,7 +27,7 @@ public class EmployeeController {
 	
 	@Autowired
 	private EmployeeServices employeeServices;
-	private Gson gson = new Gson();
+
 	
 
 	@RequestMapping(value = "/getAll", method = RequestMethod.GET, produces = "application/json")
